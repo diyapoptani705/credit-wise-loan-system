@@ -81,6 +81,7 @@ Trained and evaluated the following models:
 - Retrained all models to assess performance improvements  
 
 ---
+
 ## 📊 Results
 
 ### K-Nearest Neighbors (k = 13)
@@ -149,12 +150,55 @@ This project demonstrates the importance of model selection and feature transfor
 
 ---
 
+## 🖥️ Streamlit Web App
+
+CreditWise includes an interactive web application built with **Streamlit** that allows users to predict loan approval in real time without writing any code.
+
+### Features
+- Input applicant details through a simple form  
+- Instant loan approval prediction (Approved / Not Approved)  
+- Confidence probability chart for the prediction  
+- Loads trained model files directly from GitHub  
+
+### Project Structure
+
+```
+CreditWise/
+├── app.py                  # Streamlit web application
+├── requirements.txt        # Python dependencies
+├── credit_wise.ipynb       # Model training notebook
+└── .gitignore              # Excludes pkl files and dataset
+
+### Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/diyapoptani705/credit-wise-loan-system.git
+cd YOUR_REPO
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the app
+streamlit run app.py
+```
+
+### Deploy on Streamlit Cloud (Free)
+
+1. Push all files to your GitHub repository  
+2. Go to [share.streamlit.io](https://share.streamlit.io)  
+3. Click **New app** → select your repo and set `app.py` as the main file  
+4. Click **Deploy** — your app will be live with a public URL  
+
+---
+
 ## Tech Stack
 
 - Python  
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-learn  
+- Streamlit  
 
 ---
 
@@ -162,4 +206,10 @@ This project demonstrates the importance of model selection and feature transfor
 
 1. Install dependencies:
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+pip install -r requirements.txt
+```
+
+2. Launch the Streamlit app:
+```bash
+streamlit run app.py
+```
